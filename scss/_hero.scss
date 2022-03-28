@@ -10,6 +10,11 @@
         margin-top: 1rem;
     }
 
+    &__text {
+        color: $white;
+        font-weight: 800;
+    }
+
     @include breakpoints-up (md) {
         background: linear-gradient($greyishBlue, 30%, $white);
     }
@@ -33,15 +38,6 @@
 
         @include breakpoints-up (md) {
             flex-direction: row;
-
-            // h2 {
-            //     font-size: 1rem;
-            //     color: black;
-            // }
-
-            // p {
-            //     color: black;
-            // }
         }
     
         .hero__personal {
@@ -57,6 +53,7 @@
 
             p {
                 color: $greyishBlue;
+                font-weight: 400;
             }
 
             @include breakpoints-up (md) {
@@ -64,14 +61,6 @@
                 flex: 1;
                 margin: 4rem 0;
                 text-align: left;
-
-                .hero__biography {
-
-                    // h2 {
-                    //     color: rgb(0, 0, 0);
-                    // }
-                    
-                }
 
                 > div {
                     margin-bottom: 3rem;
@@ -91,6 +80,7 @@
             @include breakpoints-up (md) {
                 order: 0;
                 flex: 1;
+                height: 30rem;
             }
             
             img {
