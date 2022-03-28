@@ -218,6 +218,15 @@ header .nav .nav__link::after {
   margin-top: 1rem;
 }
 
+.hero p {
+  line-height: 2;
+}
+
+.hero__text {
+  color: #fff;
+  font-weight: 800;
+}
+
 @media (min-width: 48rem) {
   .hero {
     background: linear-gradient(#59628a, 30%, #fff);
@@ -257,11 +266,12 @@ header .nav .nav__link::after {
 }
 
 .hero__summary .hero__personal > div {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .hero__summary .hero__personal p {
   color: #59628a;
+  font-weight: 400;
 }
 
 @media (min-width: 48rem) {
@@ -290,6 +300,7 @@ header .nav .nav__link::after {
   .hero__summary .hero__image {
     order: 0;
     flex: 1;
+    height: 30rem;
   }
 }
 
