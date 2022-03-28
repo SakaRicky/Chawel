@@ -1,0 +1,54 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3;
+    font-size: 1.125rem;
+    color: $darkGreen;
+    font-weight: 300;
+    // overflow-x: hidden; NOT WORKING ON MOBILE 
+    // background-color: rgb(252, 242, 230);
+
+    // @include breakpoints-up(large){
+    //     font-size: $font-lg;
+    // }
+}
+
+// text
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 300;
+    // color: $darkBlue;
+    line-height: 1.15;
+}
+
+a {
+    text-decoration: none;
+    color: $darkGrey;
+    font-size: 1rem;
+
+    &:hover {
+        color: $darkGreen;
+    }
+}
+
+i {
+    font-size: 1.5rem;
+}
+
+.container {
+    padding: 1rem 2rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
