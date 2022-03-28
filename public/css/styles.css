@@ -309,6 +309,7 @@ header .nav .nav__link::after {
   border-radius: 12rem;
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .hero__summary .hero__statistics {
