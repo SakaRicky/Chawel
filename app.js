@@ -11,7 +11,7 @@ toggleButton.addEventListener('click', () => {
         mobileNav.style.left = "50%"
 
     } else {
-        mobileNav.style.left = "150%"
+        mobileNav.style.left = "190%"
         overlay.style.opacity= "0";
         overlay.style.visibility= "hidden"
     }

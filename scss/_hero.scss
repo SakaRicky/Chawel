@@ -1,7 +1,7 @@
 .hero {
     background: linear-gradient($greyishBlue, $white);
-    // background-color: aqua;
-    color: $white;
+    padding-top: 2rem;
+    color: $veryLightGrey;
 
     h1 {
         text-align: center;
@@ -10,15 +10,16 @@
         margin-top: 1rem;
     }
 
+    @include breakpoints-up (md) {
+        background: linear-gradient($greyishBlue, 30%, $white);
+    }
+
     &__summary {
         display: flex;
-        padding: 2rem 0;
-
-        @include breakpoints-down (md) {
-            flex-direction: column;
-            gap: 2rem;
-            text-align: center;
-        }
+        padding: 4rem 0 2rem 0;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
 
         h2 {
             color: $darkGrey;
@@ -29,13 +30,25 @@
             display: block;
             margin-bottom: 0.5rem;
         }
+
+        @include breakpoints-up (md) {
+            flex-direction: row;
+
+            // h2 {
+            //     font-size: 1rem;
+            //     color: black;
+            // }
+
+            // p {
+            //     color: black;
+            // }
+        }
     
         .hero__personal {
+            order: 3;
 
             h2 {
-                font-size: 1.5rem;
                 margin-bottom: 1rem;
-                
             }
 
             > div {
@@ -46,21 +59,38 @@
                 color: $greyishBlue;
             }
 
-            @include breakpoints-down (md) {
-                order: 3;
+            @include breakpoints-up (md) {
+                order: 0;
+                flex: 1;
+                margin: 4rem 0;
+                text-align: left;
+
+                .hero__biography {
+
+                    // h2 {
+                    //     color: rgb(0, 0, 0);
+                    // }
+                    
+                }
+
+                > div {
+                    margin-bottom: 3rem;
+                }
             }
         }
 
         .hero__image {
-            background-color: $white;
+            background-color: $veryLightGrey;
             width: 90%;
             height: 27rem;
             margin: 0 auto;
             border-radius: 12rem;
             overflow: hidden;
+            order: 1;
 
-            @include breakpoints-down (md) {
-                order: 1;
+            @include breakpoints-up (md) {
+                order: 0;
+                flex: 1;
             }
             
             img {
@@ -73,19 +103,37 @@
         }
 
         .hero__statistics {
-
-
-            @include breakpoints-down (md) {
-                order: 2;
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 1rem;
-            }
+            order: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
 
             p {
                 font-size: 2rem;
                 font-weight: 400;
                 color: $greyishBlue;
+            }
+
+            @include breakpoints-up (md) {
+                order: 0;
+                flex: 1;
+                display: block;
+                text-align: right;
+                margin: 4rem 0;
+
+                > div {
+                    margin-bottom: 2rem;
+                }
+
+                > div:first-child, div:nth-child(2) {
+                    // h2 {
+                    //     color: rgb(0, 0, 0);
+                    // }
+                    // p {
+                    //     color: $white;
+                    // }
+                }
             }
         }
     }
