@@ -1,0 +1,117 @@
+.work {
+    padding: 2rem 0;
+
+    h1 {
+        font-size: 2rem;
+
+        @include breakpoints-up(md) {
+            font-size: 3rem;
+        }
+    }
+
+    &__card {
+        border: 2px solid $darkGreen;
+        border-radius: 10px;
+        margin: 2rem 0;
+        position: relative;
+
+        @include breakpoints-up (md) {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        img {
+            width: 75%;
+            height: 250px;
+            border-radius: 60%;
+            object-fit: cover;
+
+            @include breakpoints-up (md) {
+                width: 35%;
+            }
+        }
+    }
+
+    &__description {
+        padding: 1rem;
+        background-color: $darkGreen;
+        color: $white;
+        
+        @include breakpoints-up (md) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+
+    &__showcase {
+        text-align: center;
+        padding: 1rem;
+
+        @include breakpoints-up (md) {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            padding: 1rem 0;
+        }
+
+        h3 {
+            color: $darkGreen;
+            margin: 1rem 0;
+        }
+        
+    }
+
+    .arrows {
+        display: none;
+        position: absolute;
+        top: 35%;
+        right: 0;
+        background-color: $darkGreen;
+        color: $white;
+        padding: 0.5rem;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        @include breakpoints-up(md) {
+            display: block;
+        }
+
+        i {
+            display: block;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+    }
+
+    .mobile_arrows {
+        position: absolute;
+        top: 55%;
+        right: 0;
+        background-color: $darkGreen;
+        color: $white;
+        padding: 0.5rem;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+
+        @include breakpoints-up(md) {
+            display: none;
+        }
+
+        i {
+            display: block;
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+        }
+    }
+
+}

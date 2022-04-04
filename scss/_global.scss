@@ -15,8 +15,8 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.3;
     font-size: 1.125rem;
-    color: $darkGreen;
     font-weight: 300;
+    // color: $darkGreen;
     // overflow-x: hidden; NOT WORKING ON MOBILE 
     // background-color: rgb(252, 242, 230);
 
@@ -41,6 +41,10 @@ a {
     &:hover {
         color: $darkGreen;
     }
+}
+
+p {
+    line-height: 1.5;
 }
 
 i {
